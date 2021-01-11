@@ -1,0 +1,24 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  name: fourbull-dc
+  labels:
+    app: fourbull.com
+  namespace: fourbull
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: fourbull
+    spec:
+      containers:
+        - name: fourbull
+          image: git.kecklers.com:6789/django/bullout/fourbull
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: golang
+              protocol: TCP
+      imagePullSecrets:
+        - name: gitkecklerscom6789

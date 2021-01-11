@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: fourbull-ingress
+  namespace: testproject
+spec:
+  rules:
+    - host: fourbull.com.apps-crc.testing
+      http:
+        paths:
+          - backend:
+              serviceName: fourbull-service
+              servicePort: 80
+            pathType: Prefix
+            path: /
