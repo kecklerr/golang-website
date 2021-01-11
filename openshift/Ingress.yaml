@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: fourbull-ingress
-  namespace: testproject
+  namespace: fourbull
 spec:
   rules:
     - host: fourbull.com.apps-crc.testing

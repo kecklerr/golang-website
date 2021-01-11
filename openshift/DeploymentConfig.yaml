@@ -3,7 +3,7 @@ kind: DeploymentConfig
 metadata:
   name: fourbull-dc
   labels:
-    app: fourbull.com
+    app: fourbull
   namespace: fourbull
 spec:
   replicas: 2
