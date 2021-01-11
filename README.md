@@ -14,3 +14,6 @@ openshift  directory
 main directory
 - main.go for app 
 - using gorilla mux to do routing
+
+Futrure 
+- put in CICD steps for all this so I dont have to do it manually
